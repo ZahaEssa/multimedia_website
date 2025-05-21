@@ -97,9 +97,36 @@ table tr:hover{
     margin-bottom: 10px;
 }
 .card-description{
+    text-align: justify;
     font-size: 1em;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.2em;
+    display: block;
+    max-height: 5.6em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-height 0.3s ease;
+}
+
+.card-description.expanded{
+    max-height: none;
+    white-space: normal;
+}
+
+.read-more-btn{
+    background-color: #0056b3;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover{
+    background-color: #0056b3;
 }
 
 .card img{
